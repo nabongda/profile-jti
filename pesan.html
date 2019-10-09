@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Teknik Informatika Polindra</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+
+		.bg{
+			background-image: url(ti.jpg);
+			min-height: 380px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+
+		.logo {
+			background-repeat: no-repeat;
+			padding-right: 18px !important;
+			background-size: 20%;
+			background-position-y: 20%;
+			float: left;
+			margin: 15px;
+		}
+
+		.text-ti{
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background-color: #6495ED;
+			color: #191970;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-family: Amatic SC;
+			text-align: center;
+		}
+		.header{
+			​position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: black;
+		}
+
+		.container {
+			margin: 20px;
+			width: auto;
+			float: right;
+		}
+
+		.navigation{
+			overflow: hidden;
+			font-family: courier;
+		}
+
+		.navigation a {
+			float: left;
+			display: inline-block;
+			color: #6495ED;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			border-radius: 5px;
+		}
+
+		.navigation a:hover, .dropdown:hover .dropdown {
+			color: #191970;
+			background-color: #ddd;
+		}
+
+		.navigation a.active{
+			background-color: dodgerblue;
+			color: white;
+		}
+
+		.dropdown {
+			float: left;
+			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+			color: #6495ED;
+			padding: 14px 16px;
+			font-size: 17px;
+			border: none;
+			outline: none;
+			font-family: courier;
+			margin: 0;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+		}
+
+		.dropdown-content a {
+			float: none;
+			color: #191970;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.content {
+			background-color: #87CEFA;
+			padding: 10px;
+			height: 750px;
+		}
+
+		.leftcolumn {   
+			float: left;
+			width: 75%;
+		}
+
+		.rightcolumn {
+			float: left;
+			width: 25%;
+			background-color: #f1f1f1;
+			padding-left: 20px;
+		}
+
+		.timg {
+			background-image: url(tip.jpg);
+			background-color: #aaa;
+			width: 100%;
+			padding: 20px;
+			min-height: 380px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+
+		.card {
+			background-color: white;
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		.contact{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 300px;
+			margin: auto;
+			text-align: center;
+			font-family: arial;
+		}
+
+		.title{
+			color: grey;
+			font-size: 18px;
+		}
+
+		button {
+			border: none;
+			outline: 0;
+			display: inline-block;
+			padding: 8px;
+			color: white;
+			background-color: #000;
+			text-align: center;
+			cursor: pointer;
+			width: 100%;
+			font-size: 18px;
+		}
+
+		button:hover, a:hover {
+			opacity: 0.7;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		@media screen and (max-width: 800px) {
+			.leftcolumn, .rightcolumn {   
+				width: 100%;
+				padding: 0;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			.topnav a {
+				float: none;
+				width: 100%;
+			}
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		input[type=text], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+
+		label {
+			padding: 12px 12px 12px 0;
+			display: inline-block;
+		}
+
+		input[type=submit] {
+			background-color: #6495ED;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+		}
+
+		input[type=submit]:hover {
+			background-color: #191970;
+		}
+
+		.pesan{
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+
+		.col-25 {
+			float: left;
+			width: 25%;
+			margin-top: 6px;
+		}
+
+		.col-75 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		@media screen and (max-width: 600px) {
+			.col-25, .col-75, input[type=submit] {
+				width: 100%;
+				margin-top: 0;
+				}
+			}
+
+		.footer{
+			background-color: #D2691E;
+			color: white;
+			text-align: center;
+			padding: 10px;
+			clear: both;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="logo">
+				<img src="POLINDRA.png" width="50">
+		</div>
+		<div class="container">
+			<div class="navigation">
+				<a href="WebStatisNada.html">Home</a>
+				<div class="dropdown">
+					<a href="about.html" class="dropbtn">About</a>
+					<div class="dropdown-content">
+						<a href="d3ti.html">D3 Teknik Informatika</a>
+						<a href="d4rpl.html">D4 Rekayasa Perangkat Lunak</a>
+					</div>
+				</div>
+				<a href="laboratorium.html">Laboratorium</a>
+				<a href="alumni.html">Alumni</a>
+				<a href="maps.html">Maps</a>
+				<a class="active" href="pesan.html">Pesan</a>
+			</div>
+		</div>
+		<div class="text-ti">
+			<h1>Teknik Informatika</h1>
+			<h3>Politeknik Negeri Indramayu</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<div class="pesan">
+					<form>
+						<div class="row">
+							<div class="col-25">
+								<label for="nama">Nama</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="nama" name="nama" placeholder="Nama anda...">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="email">Email</label>
+							</div>
+							<div class="col-75">
+								<input type="text" id="email" name="email" placeholder="Email anda...">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="pesan">Pesan</label>
+							</div>
+							<div class="col-75">
+								<textarea id="pesan" name="pesan" placeholder="Tulis pesan..." style="height:200px"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<input type="submit" value="Submit">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="contact">
+				<h2>Contact Us</h2>
+				<p class="title">Telp  : (0234) 5746464</p>
+				<p class="title">Email : ti@polindra.ac.id </p>
+				<p>Jl. Lohbener Lama No. 08 Indramayu</p>
+				<div style="margin: 24px 0;">
+					<a href="https://www.facebook.com/Teknik.Informatika.Polindra/"><i class="fa fa-facebook"></i></a> 
+					<a href="https://www.instagram.com/tipolindra/"><i class="fa fa-instagram"></i></a> 
+				</div>
+					<p><button>Contact</button></p>
+				</div>
+				<div class="card">
+					<img src="isi1.jpg" style="height:190px;">
+				</div>
+				<div class="card">
+					<img src="isi2.jpg" style="height:190px;">
+				</div>
+			</div>
+		</div>
+
+	<div class="footer">
+		Copyright&#169; Teknik Informatika Politeknik Negeri Indramayu 2019. All Rights Reserved.
+	</div>
+</body>
+</html>
